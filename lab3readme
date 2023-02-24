@@ -1,0 +1,41 @@
+Name: Vishwa Venkateshwaran
+
+I certify that I completed all of the work myself with no aid from anyone aside from the instructor or the undergraduate graders.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Instructions: 
+
+Refer to help manual for most of the instructions. Some key points: 
+- Spacing and capitilization matters a lot.
+- If you're going to enter a path, you must start with a '/' and must start from the root. You can move to or move any item to any directory with the correct path.
+- cp is only for files. Will not work for directories.
+- For cp and mv, enter only the file/directory you want to copy/move. The options will be presented on what you have to do. Don't do "cp file1 file2" or "mv file1 file2". It will not work! Do "cp file1" and follow the program.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Part 1:
+
+Q1: My file system uses linked list heavily. Instead of having an array of pointers to all the children, I have one pointer to the first child node and the rest of the sibling nodes are connecting by a linked list. So the elements of my file system structure is similar to that of the linked structure we discussed in class.
+
+Q2: I check whether the child pointer of the root directory is pointing to some node or pointing to nothing. If it's pointing to some node, I know there exists something in that directory. If it's pointing to nothing or NULL, I just output the message conveying the directory is empty.
+
+Q3: I think it would be possible to use terse insertion and deletion functions. Both do the same thing as regular insertion and deletion functions but terse functions are more compact and complex. But since we're still working with nodes pointing to each other, it would be possible to use terse insertion and deletion functions for this lab.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Part 2: 
+
+Q1: I picked rmrdir which is recursively remove everything from a directory (including any contents), date for displaying the date and time, and q to quit the program. I picked these three because they were the easiest to do in my eyes.
+
+Q2: I did not because it was not necessary.
+
+Q3: My motivation to display the directory strcuture the way I did stems from the fact that it was the easiest for me to display it that way. I was in a time crunch so couldn't make it look more visually appealing.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Part 3:
+
+Q1: Provided at the top.
+
+Q2: My program uses a linked list to store all the child nodes in a directory. So, if a directory has more than 64 items in it, my program won't crash, it'll keep going.
+
+Q3: mkdir testDirectory -> cd testDirectory -> vi file1 -> Input something in file1 and save -> touch file2 -> mkdir childTestDir.
+
+Q4: I have an if checking for whether the pointer to the directory is pointing to the directory or pointing to NULL. If it's pointing to NULL, I just output a message saying the directory doesn't exist. I do believe such cases are my responsibility because as the implementer of a file system, I have to make sure to test the edge cases. A user could accidently input something wrong and if the program rashes, it isn't their fault but rather my fault.
+
